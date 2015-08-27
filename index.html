@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>微易点-微信营销服务平台领跑者</title>
+<link href="css/index-x2.css" rel="stylesheet" type="text/css" />
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style/Vizo-style.css" media="all" />
+<script src="script/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+<script type="text/javascript" src="script/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="script/swipe.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){					   
+$(".item1").hover(function(){$("#tit_fc1").slideDown("normal");	}, function() {$("#tit_fc1").slideUp("fast");});				
+$(".item2").hover(function(){$("#tit_fc2").slideDown("normal");	}, function() {$("#tit_fc2").slideUp("fast");});
+$(".item3").hover(function(){$("#tit_fc3").slideDown("normal");	}, function() {$("#tit_fc3").slideUp("fast");});
+$(".item4").hover(function(){$("#tit_fc4").slideDown("normal");	}, function() {$("#tit_fc4").slideUp("fast");});
+});			   
+var currentindex=1;
+$("#flashBg").css("background-color",$("#flash1").attr("name"));
+function changeflash(i) {	
+currentindex=i;
+for (j=1;j<=5;j++){//此处的5代表你想要添加的幻灯片的数量与下面的5相呼应
+	if (j==i) 
+	{$("#flash"+j).fadeIn("normal");
+	$("#flash"+j).css("display","block");
+	$("#f"+j).removeClass();
+	$("#f"+j).addClass("dq");
+	$("#flashBg").css("background-color",$("#flash"+j).attr("name"));
+	}
+	else
+	{$("#flash"+j).css("display","none");
+	$("#f"+j).removeClass();
+	$("#f"+j).addClass("no");}
+}}
+function startAm(){
+timerID = setInterval("timer_tick()",8000);//8000代表间隔时间设置
+}
+function stopAm(){
+clearInterval(timerID);
+}
+function timer_tick() {
+    currentindex=currentindex>=5?1:currentindex+1;//此处的5代表幻灯片循环遍历的次数
+	changeflash(currentindex);}
+$(document).ready(function(){
+$(".flash_bar div").mouseover(function(){stopAm();}).mouseout(function(){startAm();});
+startAm();
+});
+
+
+
+
+</script>
+
+
+</head><body>
+<div id="header"><span class="logo"><a href="index.html"><img src="images/logo.gif" alt="微易点" border="0" /></a></span>
+  <div class="pingbi">
+  <ul>
+    <li class="menu6"><a href="about.html"><img src="images/menu.gif" border="0" /></a></li>
+    <li class="menu4"><a href="case.htm"><img src="images/menu.gif" border="0" /></a></li>
+    <li class="menu7"><a href="templates.html"><img src="images/menu.gif" border="0" /></a></li>
+    <li class="menu3"><a href="service.html"><img src="images/menu.gif" border="0" /></a></li>
+    <li class="menu2"><a href="list_2_1.html"><img src="images/menu.gif" border="0" /></a></li>
+    <li class="menu1"><a href="index.html" class="dh1"><img src="images/menu.gif" border="0" /></a></li>
+  </ul>
+</div>
+      <!--媒体查询导航-->
+<a href="#nav" class="open toggle-btn"><i class="fa fa-bars"></i></a>
+<nav id="nav">
+    <ul>
+        <li><a href="/">首页</a></li>
+        <li><a href="list_2_1.html">咨询报道</a></li>
+        <li><a href="service.html">产品功能</a></li>
+        <li><a href="templates.html">手机模板</a></li>
+        <li><a href="case.htm">经典案例</a></li>
+        <li><a href="about.html" class="active">关于我们</a></li>
+    </ul>
+    <a href="#top" class="close toggle-btn"><i class="fa fa-times-circle"></i></a>
+</nav>
+
+<!--  头部结束  -->
+
+<!--轮播开始-->
+
+
+
+
+
+</div>
+<div id='slider'  class='swipe'>
+  <div class='swipe-wrap'>
+    <div style="background:#004ea1;"><img src="images/Slides-1.png"></div>
+    <div style="background:#0f51b2"><img src="images/banner1.jpg"></div>
+    <div style="background:#3fa9f5"><img src="images/Slides-3.png"></div>
+    <div style="background:#0075c2"><img src="images/Slides-4.png"></div>
+    <div style="background:#b0dcf5"><img src="images/Slides-5.jpg"></div>
+  </div>
+  <div class="slider-control">
+      <button class="left" onclick="mySwipe.prev()"><i class="fa fa-angle-left"></i></button>
+      <button class="right" onclick="mySwipe.prev()"><i class="fa fa-angle-right"></i></button>
+  </div>
+</div>
+
+<script>window.mySwipe = Swipe(document.getElementById('slider'));</script>
+
+<!--轮播结束-->
+  <!--中间1-->
+<div id="content">
+ <div class="title"><img src="images/work_tit.png" /></div>
+  <div class="zxcp">
+    <ul class="zxcp1">
+      <li><a href="/service.html" target="_blank"><img src="images/ad-1.jpg"/></a></li>
+      <li><a href="/merchants.html" target="_blank"><img src="images/ad-2.jpg"/></a></li>
+      <li><a href="/case.htm" target="_blank"><img src="images/ad-3.jpg"/></a></li>
+      <li><a href="/kefu.html" target="_blank"><img src="images/ad-4.jpg"/></a></li>
+    </ul>
+  </div>
+  <!--中间2-->
+<div class="about">
+    <div class="about2">
+    <div class="js">微易点 是国内独特的基于微信公众平台的营销及服务.微易点帮客户建立微官网(您手机端的门户网站)、会员营销体系、微信促销工具、微信交易系统、微团购、微商城、以及管理与互动系统等工具来实 现客户的转化与深度服务。
+</div>
+<div class="fw"><span class="fwtit"><img src="images/about_22.gif" /></span>
+     <ul class="fw1">
+        <li class="web"><a href="service.html" ><img src="images/fwan.gif" border="0"/></a></li>
+        <h1>网页设计及开发</h1>
+        <h3>微易点可与企业原有Wap进行打通，使用HTML5新技术进行无限拓展，帮助企业打造最便捷、易推广的微信，此功能如果结合微信3G网站可以使您的公众号用户体验更好，带给粉丝不一样的感受。</h2>
+        <li class="app"><a href="service.html" ><img src="images/fwan.gif" border="0"/></a></li>
+        <h1>微官网设计及开发</h1>
+        <h3>微易点能快速生成属于您自己的微信3G网站，并且有各种精美模板，供您选择，还有自定义模版，可以设计出自己的风格，不但提高了信息量，也使信息的展现更加赏心悦目，进一步提高用户体验。</h2>
+        <li class="flash"><a href="service.html"><img src="images/fwan.gif" border="0"/></a></li>
+        <h1>微商城设计及开发</h1>
+        <h3>微商城是时下最热门的互动应用微信媒介，配合微信5.0微信支付功能，实现商家与客户在线互动，实现商城的在线支付功能，并且对商参与人数，交易量进行跟踪。</h3>
+        <li class="wb"><a href="service.html"><img src="images/fwan.gif" border="0"/></a></li>
+        <h1>行业版公众开发</h1>
+        <h3>微易点会员卡通过全国6亿微信用户，帮助企业建立集品牌推广、会员管理、营销活动、统计报表于一体的微信会员管理平台。还可根据客户特征进行精细分类，从而实现各种模式的精准营销。</h3>
+      </ul>
+	  <span class="xialan"><img src="images/webzt.gif" alt="微易点" /></span>
+    </div>
+  </div>
+  </div>
+  <div class="news"><span class="lb"><img src="images/new_03.gif" alt="微易点" /></span>
+    <script>
+function csubstr(str,len){
+ if(str.length>10){
+  return str.substring(0,len)+"...";
+ }else{
+  return str;
+ }
+}
+</script>
+       <ul><li><a href="/6.html" target="_blank"><span class="tp"><img src='/uploads/allimg/140812/1-140Q210513c37-lp.jpg'width='80px' height='60px'/></span><span class="tit">如何做好微信营销</span><span class="nr1">
+        <script>document.write(csubstr("随着移动互联网的逐渐深入人心，微信公众号已经成为了企业营销和服务的标配，但很多企业仅仅是开通了公众号，却对公众号的运营漫不经心，完全达不到预期目标。 最近微信发布公",45));</script>
+        </span></a></li>
+<li><a href="/2.html" target="_blank"><span class="tp"><img src='/uploads/allimg/140526/20140415170846_54011.jpg'width='80px' height='60px'/></span><span class="tit">腾讯和微易点就黑名单事件发布联合声</span><span class="nr1">
+        <script>document.write(csubstr("【中国经济新闻网】4月11日，微一点全国首届代理商大会正式召开，腾讯微信云作为战略合作伙伴也出席了此次会议。期间，微一点与腾讯一起，就之前网络上流传的微信云黑名单事件",45));</script>
+        </span></a></li>
+
+
+    </ul>
+    <div class="more"><a href="list_2_1.html" ><img src="images/jia1.gif" border="0" /></a></div>
+  </div>
+</div>
+<div id="footer">
+  <div class="dibu">
+    <div class="con">
+      <div><img src="images/footer_03.gif" /></div>
+      <div class="gzsj">
+        <p><a href="/" target="_blank">微易点首页</a> |  <a href="http://www.weiyd.com.cn/passport/login.php?userAction=login" target="_blank">申请入驻</a> |   <a href="about.html" target="_blank">关于微易点</a> |  <a href="/passport/login.php?userAction=login" target="_blank">授权认证</a> |  <a href="https://exmail.qq.com/login" target="_blank">企业邮箱入口</a> |  <a href="/passport/login.php?userAction=login" target="_blank">代理商登录</a></p>
+        <p>免费热线：0757-28096109   QQ：1832485233 QQ：2323094117   邮箱：934108086@qq.com</p>
+        <p>地址：广东省佛山市顺德区容桂镇上街市永安综合楼201座</p>
+      </div>
+    </div>
+    <span class="h40px"></span>
+    <div class="menu"><a href="index.html">首页</a>　　<a href="case.htm">案例展示</a>　　<a href="service.html">服务内容</a>　　<a href="about.html">关于我们</a>　　<a href="list_2_1.html">新闻动态</a>　　<a href="#">友情链接</a>　　<a href="kefu.html">联系我们</a> 　　　　　　　　　　　　<span class="bqsy">2010-2014 lczhi All rights reserved. 粤ICP备14063565号-1</span>　　　　　</div>
+  </div>
+</div>
+
+
+<!-- /footer -->
+</body>
+<head>
+<script type="text/javascript" name="baidu-tc-cerfication" src="http://apps.bdimg.com/cloudaapi/lightapp.js#a0e6eab288b67b44cb52c2d5c3047908"></script> <script type="text/javascript">window.bd && bd._qdc && bd._qdc.init({app_id: '27ff076a6a36f7123d6090d2'});</script>
+</head>
+</html>

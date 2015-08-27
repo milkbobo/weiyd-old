@@ -1,0 +1,46 @@
+@charset "utf-8";
+/*全局样式*/
+body{margin:0;text-align:left;font:12px/140% "微软雅黑",Microsoft YaHei,Arial,Verdana;}
+div, dl, dt,td, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, p, blockquote{list-style:none;margin:0px;padding:0px;}
+h1,h2,h3,h4,h5,h6{margin:0px;padding:0px;font-size:14px}
+Form, Select{margin:0px;padding:0px;}
+input, textarea{padding:2px;font-size:12px;resize:none;outline:none;}
+a img {border:0;}
+div, h1, h2, p, Table, Tr, Td{word-wrap:break-word;word-break:break-all;}
+address, button, caption, cite, code, dfn, em, input, optgroup, option, select, strong, textarea, th, var{font-style:normal;}
+ul li{vertical-align:top;}
+img{vertical-align:middle;}
+/*链接样式*/
+a{color:#297ab0;}
+a:focus{outline:0;}
+a:link,a:visited{text-decoration:none;vertical-align:baseline;word-break:break-all;outline:none;}
+a:hover{text-decoration:underline;vertical-align:baseline;word-break:break-all;}
+a:active{vertical-align:baseline;word-break:break-all;}
+a:hover span{cursor:pointer;text-decoration:none;}
+/*全局清除浮动样式*/
+.fix{display:inline-block;}
+.fix{display:block;}
+.fix:after{content:""; display:block; height:0px; clear:both; visibility:hidden;}
+/*元素隐藏*/
+.ndis{display:none;}
+.bdis{display:block;}
+/*浮动方向*/
+.f_l{float:left;}
+.f_r{float:right;}
+/*对齐方向*/
+.t_c{text-align:center;}
+.t_l{text-align:left;}
+.t_r{text-align:right;}
+/*基本文字状态*/
+.fwn{font-weight:normal;}
+.fwb{font-weight:bold;}
+/*常规文本缩进*/
+.t_indt{text-indent:2em;}
+.font_arial{font-family:arial,sans-serif;}
+.font_yahei{font-family:'微软雅黑',Microsoft YaHei,sans-serif;}
+/*常规文字大小*/
+.f12{font-size:12px;}
+.f14{font-size:14px;}
+.f16{font-size:16px;}
+.f18{font-size:18px;}
+

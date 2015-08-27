@@ -1,0 +1,1 @@
+INSERT INTO `dede_arctype` VALUES('2','0','0','50','咨询报道','{cmspath}','0','news.html','1','1','-1','0','0','{style}/index_article.htm','{style}/list_article22222.htm','{style}/article_article.htm','{typedir}/{aid}.html','{typedir}/list_{tid}_{page}.html','default','','','','0','{cmspath}','','0','0','','&nbsp;','');

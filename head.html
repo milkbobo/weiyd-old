@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=uft-8" />
+<title>微易点</title>
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<!--<link rel="stylesheet" media="(max-width:999px)" href="css/index-x.css">-->
+<link rel="shortcut icon" href="http://www.hb1000kv.com/favicon.ico" /></link>
+<link href="css/index-x.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="style/Vizo-style.css" media="all" />
+<script type="text/javascript" src="script/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="script/swipe.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+$(".item1").hover(function(){$("#tit_fc1").slideDown("normal");	}, function() {$("#tit_fc1").slideUp("fast");});
+$(".item2").hover(function(){$("#tit_fc2").slideDown("normal");	}, function() {$("#tit_fc2").slideUp("fast");});
+$(".item3").hover(function(){$("#tit_fc3").slideDown("normal");	}, function() {$("#tit_fc3").slideUp("fast");});
+$(".item4").hover(function(){$("#tit_fc4").slideDown("normal");	}, function() {$("#tit_fc4").slideUp("fast");});
+});
+var currentindex=1;
+$("#flashBg").css("background-color",$("#flash1").attr("name"));
+function changeflash(i) {
+currentindex=i;
+for (j=1;j<=5;j++){//此处的5代表你想要添加的幻灯片的数量与下面的5相呼应
+	if (j==i)
+	{$("#flash"+j).fadeIn("normal");
+	$("#flash"+j).css("display","block");
+	$("#f"+j).removeClass();
+	$("#f"+j).addClass("dq");
+	$("#flashBg").css("background-color",$("#flash"+j).attr("name"));
+	}
+	else
+	{$("#flash"+j).css("display","none");
+	$("#f"+j).removeClass();
+	$("#f"+j).addClass("no");}
+}}
+function startAm(){
+timerID = setInterval("timer_tick()",8000);//8000代表间隔时间设置
+}
+function stopAm(){
+clearInterval(timerID);
+}
+function timer_tick() {
+    currentindex=currentindex>=5?1:currentindex+1;//此处的5代表幻灯片循环遍历的次数
+	changeflash(currentindex);}
+$(document).ready(function(){
+$(".flash_bar div").mouseover(function(){stopAm();}).mouseout(function(){startAm();});
+startAm();
+});
+
+ //]]>
+</script>
+
+
+</head><body id="top">
+<div id="header"><span class="logo"><a href="index.html"><img src="images/logo.gif" alt="微易点" border="0" /></a></span>
+
+<div id="dianniao">
+  <ul>
+    <li class="menu6"><a href="about.html"><img src="images/menu.gif" alt="导航" border="0" /></a></li>
+    <li class="menu5"><a href="work.html"><img src="images/menu.gif" alt="导航" border="0"></a></li>
+    <li class="menu4"><a href="contact.html"><img src="images/menu.gif" alt="导航" border="0" /></a></li>
+    <li class="menu3"><a href="service.html"><img src="images/menu.gif" alt="导航" border="0" /></a></li>
+    <li class="menu2"><a href="list_2_1.html"><img src="images/menu.gif" alt="导航" border="0" /></a></li>
+    <li class="menu1"><a href="index.html" class="dh1"><img src="images/menu.gif" alt="导航" border="0" /></a></li>
+  </ul>
+  </div>
+
+      <!--媒体查询导航-->
+<a href="#nav" class="open toggle-btn"><i class="fa fa-bars"></i></a>
+<nav id="nav">
+    <ul>
+        <li><a href="#" class="active">首页</a></li>
+        <li><a href="#">咨询报道</a></li>
+        <li><a href="#">产品功能</a></li>
+        <li><a href="#">经典案例</a></li>
+        <li><a href="#">帮助</a></li>
+        <li><a href="#">关于我们</a></li>
+    </ul>
+    <a href="#top" class="close toggle-btn"><i class="fa fa-times-circle"></i></a>
+</nav>
+
+<!--  头部结束  -->
+
+<!--轮播开始-->
+<!--
+
+<div id="Slidebox">
+
+  <div id="flashBg">
+    <div id="flashLine">
+      <div id="flash">
+      <a name="#004ea1" style="display:block;" id="flash1" target="_blank" href="#"><img src="images/Slides-1.png" width="1000" height="388"></a>
+      <a name="#008ec2" style="display:block" id="flash2" target="_blank" href="#"><img src="images/Slides-2.jpg" width="1000" height="388"></a>
+      <a name="#3fa9f5" id="flash3" target="_blank" href="#"><img src="images/Slides-3.png" width="1000" height="388"></a>
+      <a name="#0075c2" id="flash4" target="_blank" href="#"><img src="images/Slides-4.png" width="1000" height="388"></a>
+      <a name="#b0dcf5" id="flash5" target="_blank" href="#"><img src="images/Slides-5.jpg" width="1000" height="388"></a>
+        <div class="flash_bar">
+          <div class="dq"  id="f1" onclick="changeflash(1)"></div>
+          <div class="no"  id="f2" onclick="changeflash(2)"></div>
+          <div class="no"  id="f3" onclick="changeflash(3)"></div>
+          <div class="no"  id="f4" onclick="changeflash(4)"></div>
+          <div class="no"  id="f5" onclick="changeflash(5)"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+-->
+
+
+<div id='slider2'  class='swipe'>
+  <div class='swipe-wrap'>
+    <div><img src="images/Slides-1.png"></div>
+    <div><img src="images/Slides-2.jpg"></div>
+    <div><img src="images/Slides-3.png"></div>
+  </div>
+</div>
+<script>window.mySwipe = Swipe(document.getElementById('slider2'));</script>
+
+<!--轮播结束-->
+</div>
